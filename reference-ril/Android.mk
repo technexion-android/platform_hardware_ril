@@ -2,6 +2,7 @@
 
 # XXX using libutils for simulator build only...
 #
+ifneq ($(SIM8202_MODEM_ACTIVE),true)
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -49,4 +50,5 @@ else
       libril
   LOCAL_MODULE:= reference-ril
   include $(BUILD_EXECUTABLE)
+endif
 endif
